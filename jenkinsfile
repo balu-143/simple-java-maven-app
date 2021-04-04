@@ -1,0 +1,9 @@
+node('node1') {
+    stage('scm'){
+        git 'https://github.com/balu-143/simple-java-maven-app.git'
+    }
+
+    stage('build'){
+        sh 'mvn package'
+    }
+}
